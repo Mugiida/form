@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<script src="form.js"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Form</title>
+		<link rel="stylesheet" href="form.css" />
+	</head>
+	<body>
+		<form action="#" method="post">
+			<!-- Name -->
+			<label for="name">First Name:</label>
+			<input
+				id="name"
+				name="name"
+				type="text"
+				placeholder="Enter your first name"
+				required
+			/>
+
+			<!-- Family Name -->
+			<label for="family-name">Family Name:</label>
+			<input
+				id="family-name"
+				name="family_name"
+				type="text"
+				placeholder="Enter your family name"
+				required
+			/>
+
+			<!-- Gender -->
+			<p>Gender:</p>
+			<div class="gndr">
+				<input id="male" name="gender" type="radio" value="male" required />
+				<label for="male">Male</label>
+				<input id="female" name="gender" type="radio" value="female" required />
+				<label for="female">Female</label>
+			</div>
+
+			<!-- Date of Birth -->
+			<label for="dob">Date of Birth:</label>
+			<input id="dob" name="dob" type="date" required />
+
+			<!-- Email -->
+			<label for="email">Email:</label>
+			<input
+				id="email"
+				name="email"
+				type="email"
+				placeholder="Enter your email"
+				required
+			/>
+
+			<!-- Phone -->
+			<label for="phone">Phone Number:</label>
+			<input
+				id="phone"
+				name="phone"
+				type="tel"
+				placeholder="Enter your phone number"
+				required
+			/>
+			<!-- Password -->
+			<label for="password">Password:</label>
+			<input
+				id="password"
+				name="password"
+				type="password"
+				placeholder="Enter your password"
+				required
+			/>
+			<img
+				class="img2"
+				id="view"
+				src="view.png"
+				alt=""
+				onclick="togglePasswordVisibility('password')"
+			/>
+			<!-- Confirm Password -->
+			<label for="confirm-password">Confirm Password:</label>
+
+			<input
+				id="confirm-password"
+				name="confirm_password"
+				type="password"
+				placeholder="Confirm your password"
+				required
+			/>
+			<img
+				class="img1"
+				id="view"
+				src="view.png"
+				alt=""
+				onclick="togglePasswordVisibility('confirm-password')"
+			/>
+
+			<!-- Submit Button -->
+			<button type="submit" onclick="congrat()">Submit</button>
+			<!-- Reset Button -->
+			<button type="reset">Reset</button>
+		</form>
+	</body>
+</html>

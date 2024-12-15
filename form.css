@@ -1,0 +1,136 @@
+/* General Body Styles */
+body {
+	font-family: arial;
+	background-image: url("back.jpg"); /* Ensure this image exists */
+	background-size: cover;
+	background-position: center;
+	margin: 0;
+	padding: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	color: white;
+}
+
+/* Form Styles */
+form {
+	backdrop-filter: blur(10px); /* Blurred glass effect */
+	background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent dark background */
+	border-radius: 15px;
+	display: flex;
+	flex-direction: column;
+	padding: 20px 30px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	width: 100%;
+	max-width: 400px;
+}
+
+/* Input Fields */
+input {
+	margin-bottom: 15px;
+	padding: 10px;
+	border: none;
+	border-bottom: 1px solid white;
+	background-color: transparent;
+	color: white;
+	font-size: 14px;
+}
+
+input::placeholder {
+	color: rgba(255, 255, 255, 0.936);
+}
+
+input:focus {
+	outline: none;
+}
+
+/* Label Styles */
+label {
+	margin-bottom: 5px;
+	font-size: 14px;
+}
+
+/* Radio Button Styling */
+input[type="radio"] {
+	appearance: none; /* Removes the default styling */
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	width: 5px;
+	height: 5px;
+	border: 2px solid rgb(248, 251, 248); /* Light border */
+	border-radius: 50%; /* Makes it circular */
+	outline: none;
+	cursor: pointer;
+	background-color: transparent;
+	vertical-align: middle;
+	margin: 0;
+}
+
+input[type="radio"]:checked {
+	background-color: rgb(2, 160, 2); /* Green when checked */
+}
+
+/* Gender Group Styling */
+.gndr {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 15px;
+}
+
+/* Buttons Styling */
+button {
+	padding: 10px;
+	font-size: 14px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	color: white;
+	margin-top: 10px;
+}
+
+button {
+	border: 1px solid white;
+	background-color: transparent;
+	transition: all 0.3s;
+}
+
+button:hover {
+	opacity: 0.9;
+	background-color: white;
+	color: black;
+}
+
+.img1 {
+	width: 15px;
+	cursor: pointer;
+	position: absolute;
+	right: 40px;
+	bottom: 140px;
+}
+.img2 {
+	width: 15px;
+	cursor: pointer;
+	position: absolute;
+	right: 40px;
+	bottom: 215px;
+}
+.congratulations {
+	background-color: rgba(0, 0, 0, 0.7);
+	border-radius: 15px;
+	padding: 20px 30px;
+	text-align: center;
+	width: 100%;
+	max-width: 400px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+	font-size: 24px;
+	margin-bottom: 10px;
+}
+
+p {
+	font-size: 18px;
+}
