@@ -1,7 +1,10 @@
 /* General Body Styles */
 body {
 	font-family: arial;
-	background-image: url("back.jpg"); /* Ensure this image exists */
+	background-image: url("back.jpg");
+	filter: saturate(-2) contrast(-3);
+	/* Some browsers require prefixes for older versions */
+	-webkit-filter: saturate(-2) contrast(-3); /* Ensure this image exists */
 	background-size: cover;
 	background-position: center;
 	margin: 0;
@@ -9,12 +12,10 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-		filter: saturate(-2) contrast(-3);
-	/* Some browsers require prefixes for older versions */
-	-webkit-filter: saturate(-2) contrast(-3);
+
 	color: white;
-	padding-top:30px;
-	padding-bottom:30px;
+	padding-top: 30px;
+	padding-bottom: 30px;
 }
 
 /* Form Styles */
@@ -110,14 +111,14 @@ button:hover {
 	cursor: pointer;
 	position: absolute;
 	right: 40px;
-	bottom: 140px;
+	bottom: 180px;
 }
 .img2 {
 	width: 15px;
 	cursor: pointer;
 	position: absolute;
 	right: 40px;
-	bottom: 215px;
+	bottom: 250px;
 }
 .congratulations {
 	background-color: rgba(0, 0, 0, 0.7);
