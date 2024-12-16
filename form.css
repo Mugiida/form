@@ -9,7 +9,9 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	
+		filter: saturate(-2) contrast(-3);
+	/* Some browsers require prefixes for older versions */
+	-webkit-filter: saturate(-2) contrast(-3);
 	color: white;
 	padding-top:30px;
 	padding-bottom:30px;
