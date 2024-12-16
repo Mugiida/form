@@ -12,24 +12,27 @@ function togglePasswordVisibility(inputId) {
 	}
 }
 function congrat() {
-	// Get the values of the name and family name fields
+	// Get the values of the name, family name, and gender fields
 	var name = document.getElementById("name").value;
 	var familyName = document.getElementById("family-name").value;
+	var genderMale = document.getElementById("male").checked;
+	var genderFemale = document.getElementById("female").checked;
 
 	// Check if the form is completely filled
-	if (name && familyName) {
+	if (name && familyName && (genderMale || genderFemale)) {
+		// Determine the prefix based on the selected gender
+		var prefix = genderMale ? "Mr." : "Ms.";
+
 		// Show the congratulatory alert
 		alert(
-			"Congratulations, Mr/Ms. " +
+			"Congratulations, " +
+				prefix +
+				" " +
 				name +
 				" " +
 				familyName +
 				"!\nYour form has been received by the company."
 		);
 		return true; // Allow form submission
-	} else {
-		// If fields are not filled
-		alert("Please fill out all the required fields.");
-		return false; // Prevent form submission
 	}
 }
