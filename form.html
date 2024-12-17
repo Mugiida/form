@@ -8,7 +8,7 @@
 		<link rel="stylesheet" href="form.css" />
 	</head>
 	<body>
-		<form action="#" method="post">
+		<form action="congrat.html" method="post">
 			<!-- Name -->
 			<label for="name">First Name:</label>
 			<input
@@ -30,7 +30,7 @@
 			/>
 
 			<!-- Gender -->
-			<p>Gender:</p>
+			<label for="gnder">Gender:</label>
 			<div class="gndr">
 				<input id="male" name="gender" type="radio" value="male" required />
 				<label for="male">Male</label>
@@ -68,6 +68,7 @@
 				name="password"
 				type="password"
 				placeholder="Enter your password"
+				oninput="checkPasswordStrength()"
 				required
 			/>
 			<img
@@ -77,6 +78,7 @@
 				alt=""
 				onclick="togglePasswordVisibility('password')"
 			/>
+			<p id="password-message1"></p>
 			<!-- Confirm Password -->
 			<label for="confirm-password">Confirm Password:</label>
 
@@ -85,6 +87,7 @@
 				name="confirm_password"
 				type="password"
 				placeholder="Confirm your password"
+				oninput="checkPasswordMatch()"
 				required
 			/>
 			<img
@@ -94,7 +97,7 @@
 				alt=""
 				onclick="togglePasswordVisibility('confirm-password')"
 			/>
-			<p id="password-message"></p>
+			<p id="password-message2"></p>
 
 			<!-- Submit Button -->
 			<button type="submit" onclick="congrat()">Submit</button>
