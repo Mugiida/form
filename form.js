@@ -36,3 +36,58 @@ function congrat() {
 		return true; // Allow form submission
 	}
 }
+function checkPasswordStrength() {
+	const password = document.getElementById("password").value;
+	const message = document.getElementById("password-message1");
+	let strength = 0;
+
+	// Criteria for password strength
+	const lengthCriteria = password.length >= 8;
+	const uppercaseCriteria = /[A-Z]/.test(password);
+	const numberCriteria = /\d/.test(password);
+	const specialCharCriteria = /[!@#$%^&*(),.?":{}|<>]/.test(password);
+
+	// Evaluate strength
+	if (lengthCriteria) strength++;
+	if (uppercaseCriteria) strength++;
+	if (numberCriteria) strength++;
+	if (specialCharCriteria) strength++;
+
+	// Update the message based on strength
+	if (strength === 0) {
+		message.textContent = "Enter a password to check its strength.";
+		message.style.color = "white";
+	} else if (strength === 1) {
+		message.textContent = "Weak password. Add at least 8 characters,";
+		message.style.color = "red";
+	} else if (strength === 2) {
+		message.textContent =
+			"Fair password. Try adding uppercase letters or special symbols.";
+		message.style.color = "orange";
+	} else if (strength === 3) {
+		message.textContent =
+			"Strong password. Add special characters to make it  stronger.";
+		message.style.color = "yellow";
+	} else if (strength === 4) {
+		message.textContent = "Very strong password!";
+		message.style.color = "green";
+	}
+}
+function checkPasswordMatch() {
+	const password = document.getElementById("password").value;
+	const confirmPassword = document.getElementById("confirm-password").value;
+	const matchMessage = document.getElementById("password-message2");
+
+	if (confirmPassword === "") {
+		matchMessage.textContent = ""; // No message when confirm-password is empty
+		return;
+	}
+
+	if (password === confirmPassword) {
+		matchMessage.textContent = "Passwords match!";
+		matchMessage.style.color = "green";
+	} else {
+		matchMessage.textContent = "Passwords do not match.";
+		matchMessage.style.color = "red";
+	}
+}
